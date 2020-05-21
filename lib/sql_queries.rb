@@ -29,7 +29,7 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
    Inner JOIN Pledges
    ON Projects.id = Pledges.project_id
    GROUP BY Projects.title
-   HAVING over_goal > 0;"
+   HAVING over_goal >= 0;"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_tUhe_summed_amount
